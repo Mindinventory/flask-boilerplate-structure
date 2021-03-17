@@ -8,7 +8,3 @@ rest_api = Api(api)
 
 rest_api.add_resource(SignupApiView, '/auth/signup')
 rest_api.add_resource(LoginApiView, '/auth/login')
-
-
-
-

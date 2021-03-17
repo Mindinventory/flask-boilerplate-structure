@@ -48,8 +48,4 @@ def add_users(count):
         db.session.add(user)
         db.session.commit()
 
-
     return print('{} users were added successfully to the database.'.format(count))
-
-
-
