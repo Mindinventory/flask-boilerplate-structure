@@ -1,0 +1,39 @@
+{% extends "layouts/mainbase.html" %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm d-flex justify-content-center mt-5">
+            <form class="border p-5" action="/auth/login" method="post">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <div class="alert alert-info ">
+                    {{ messages[0] }}
+                </div>
+                {% endif %}
+                {% endwith %}
+                <h4 class="text-center">Login</h4>
+                <div class="form-group">
+                    {{ render_field(form.email) }}
+                    {{ render_field(form.password) }}
+                    {{ form.csrf_token }}
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary" type="submit">Login</button>
+                        <a href="/auth/forgot">
+                            <div class="btn btn-primary">
+                                I forgot my password
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm"></div>
+    </div>
+</div>
+
+
+{% endblock %}

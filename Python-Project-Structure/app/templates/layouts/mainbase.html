@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <title> {% block title %} {% endblock %}</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{{ url_for('index') }}">Flask</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            {% if session['email'] %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('auth.signup') }}">Signup</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+{% macro render_field(field) %}
+<div class="field">
+    {{ field(name_=field.name, id=field.name, placeholder=field.description, class_="form-control my-2") }}
+</div>
+{% if field.errors %}
+<ul class=errors>
+    {% for error in field.errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+</dd>
+{% endmacro %}
+
+
+{% block content %} {% endblock %}
+
+
+<footer class="container-fluid bg-light text-center p-0" style="position: absolute; bottom: 0;">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-dark" href="https://mindinventory.com/">www.mindinventory.com</a>
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery, Bootstrap JS -->
+<script src="{{ url_for('static', filename='js/jquery-3.6.0.slim.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
