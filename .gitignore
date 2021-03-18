@@ -2,3 +2,15 @@
 .pyc
 .idea
 /.idea/
+*.pyc
+*.pyo
+.installed.cfg
+bin
+develop-eggs
+dist
+downloads
+eggs
+parts
+app/*.egg-info
+lib
+lib64

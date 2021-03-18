@@ -34,3 +34,4 @@ ADMINS = ['Your Email']
 # Admin credentials
 ADMIN_CREDENTIALS = ('admin', 'admin')
 FLASK_ADMIN_SWATCH = 'cerulean'
+WTF_CSRF_ENABLED = False
