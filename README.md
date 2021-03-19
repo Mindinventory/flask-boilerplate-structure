@@ -147,7 +147,9 @@ To run your application.
    ```yaml  
     flask seeder --count=n # here n is number of user
    ```
-## On successful running
+8. SMTP configuration:
+
 ![](app/static/img/snippet.png)
-## On successful running
-![](app/static/img/home.png)
+
+## On successful running of the project
+![home.gif](app/static/img/home.gif)
