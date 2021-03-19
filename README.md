@@ -15,9 +15,10 @@
 <img src="https://img.shields.io/badge/flask-1.1.2-red">
 </a>
 
-This project will help to build scalable application this includes built-in structured flask boilerplate which supports the latest python versions, and a lot more features like Admin panel,
+```This project will help to build scalable application this includes built-in structured flask boilerplate which supports the latest python versions, and a lot more features like Admin panel,
 SMTP configuration, LRF flow(Login and Registration), mail authentication, separate settings file for root project configuration, 
 travis integration(CI), alembic (database migrations tool), faker(fake data generator), ORM support(SQLAlchemy), Jinja2 (Template Engine) and it is flexible enough for adding and using other libraries.  
+```
 
 ## Table of content
 - [Standard](#standard)
