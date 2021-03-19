@@ -1,5 +1,6 @@
 # Flask boilerplate 
-This is a sample structure for Flask Projects with templating and REST API versioning.
+This is a sample boilerplate structure for Flask Projects with templating and REST API versioning.
+
 ## Table of content
 - [Standard](#standard)
 - [Project Structure](#project-structure)
