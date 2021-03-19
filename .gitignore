@@ -14,3 +14,4 @@ parts
 app/*.egg-info
 lib
 lib64
+.pytest_cache
